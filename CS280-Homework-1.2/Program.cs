@@ -10,14 +10,88 @@ namespace CS280_Homework_1._2
     {
         private static void Main(string[] args)
         {
-            Pokemon pokemon = new Pokemon();
-            pokemon.Height = 2.0f;
-            pokemon.Weight = 12.7f;
-            pokemon.Category = "Lizard";
-            pokemon.Abilities = "Blaze";
-            pokemon.Gender = "M";
-            Console.WriteLine("身高:{0}公尺, 體重{1}磅",
-            pokemon.Height, pokemon.Weight);
+            string name = "";
+            float National = 0.0f;
+            string Abilities = "";
+            float Weight = 0.0f;
+            string Category = "";
+            string Gender = "";
+
+            Console.WriteLine("請輸入一隻Pokemon:");
+            Console.Write("Name:");
+            try
+            {
+                name = (Console.ReadLine());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("輸入錯誤");
+                Console.WriteLine("錯誤訊息:\n" + e.ToString());
+                return;
+            }
+
+            Console.Write("NationalNo:");
+            try
+            {
+                National = float.Parse(Console.ReadLine());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("輸入錯誤");
+                Console.WriteLine("錯誤訊息:\n" + e.ToString());
+                return;
+            }
+
+            Console.Write("Abilities:");
+            try
+            {
+                Abilities = (Console.ReadLine());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("輸入錯誤");
+                Console.WriteLine("錯誤訊息:\n" + e.ToString());
+                return;
+            }
+
+            Console.Write("Weight:");
+            try
+            {
+                Weight = float.Parse(Console.ReadLine());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Weight輸入錯誤");
+                Console.WriteLine("錯誤訊息:\n" + e.ToString());
+                return;
+            }
+
+            Console.Write("Category:");
+            try
+            {
+                Category = (Console.ReadLine());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("輸入錯誤");
+                Console.WriteLine("錯誤訊息:\n" + e.ToString());
+                return;
+            }
+
+            Console.Write("Gender:");
+            try
+            {
+                Gender = (Console.ReadLine());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("輸入錯誤");
+                Console.WriteLine("錯誤訊息:\n" + e.ToString());
+                return;
+            }
+
+            Console.WriteLine("名字:{0}, 編號{1}, 體重{2}, 能力{3}, 類別{4}, 性別{5}",
+                name, National, Weight, Abilities, Category, Gender);
         }
     }
 }
